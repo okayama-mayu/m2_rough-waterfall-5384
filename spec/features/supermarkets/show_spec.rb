@@ -62,7 +62,7 @@ RSpec.describe 'Supermarket Show Page', type: :feature do
     # When I visit a supermarket's show page
     # I can see the three most popular items that are available in the supermarket,
     # (Popularity is based on how many customers are associated with that item)
-    it '' do 
+    it 'displays the top 3 items' do 
         supermarket_1 = Supermarket.create!(name: Faker::Address.community, location: Faker::Address.city)
 
         customer_1 = supermarket_1.customers.create!(name: Faker::Name.name)
