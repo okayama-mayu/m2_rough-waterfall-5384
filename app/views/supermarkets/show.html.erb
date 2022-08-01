@@ -1,3 +1,10 @@
 <h1><%= @supermarket.name %></h1>
 
 <%= link_to 'View All Items in Supermarket', supermarket_items_path(@supermarket) %>
+
+<h3>Top Items</h3>
+<ul>
+    <% @supermarket.top_3_items.each do |item| %>
+        <li><%= item.item_name %></li>
+    <% end %>
+</ul>
