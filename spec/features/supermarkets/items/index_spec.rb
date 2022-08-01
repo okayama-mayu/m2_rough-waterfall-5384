@@ -24,7 +24,6 @@ RSpec.describe 'Supermarket Items Index Page', type: :feature do
         CustomerItem.create!(customer_id: customer_2.id, item_id: item_4.id)
 
         visit supermarket_items_path(supermarket_1)
-        save_and_open_page
 
         within('#item-0') do 
             expect(page).to have_content(item_1.name)
