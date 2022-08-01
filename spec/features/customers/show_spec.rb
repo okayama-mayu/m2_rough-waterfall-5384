@@ -44,7 +44,6 @@ RSpec.describe 'Customer Show Page', type: :feature do
         CustomerItem.create!(customer_id: customer_2.id, item_id: item_3.id)
 
         visit customer_path(customer_1) 
-        save_and_open_page
 
         expect(page).to have_content(supermarket_1.name)
     end

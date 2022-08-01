@@ -1,7 +1,11 @@
 <h1><%= @customer.name %></h1>
 
-<h3>Items Bought by Customer </h3>
+<h4>Associated Supermarket: <%= @customer.supermarket.name %></h4>
+
+<h4>Items Bought by Customer </h4>
+<ul>
 <% @customer.items.each do |item| %>
-    <%= item.name %>
+    <li><%= item.name %></li>
     <br>
 <% end %>
+</ul>
