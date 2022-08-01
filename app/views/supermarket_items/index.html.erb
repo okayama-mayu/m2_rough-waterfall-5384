@@ -1,0 +1,9 @@
+<h1>Supermarket Items for <%= @supermarket %> Market</h1>
+
+<% binding.pry %>
+
+<% @supermarket.items.uniq.each_with_index do |item, index| %>
+    <div id = "item-<%=index%>">
+        <%= item.name %>
+    </div>
+<% end %>
