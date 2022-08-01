@@ -20,13 +20,14 @@ RSpec.describe 'Customer Show Page', type: :feature do
         CustomerItem.create!(customer_id: customer_2.id, item_id: item_3.id)
 
         visit customer_path(customer_1) 
+        save_and_open_page
 
         expect(page).to have_content(customer_1.name)
         expect(page).to have_content(item_1.name)
         expect(page).to have_content(item_2.name)
 
         expect(page).to_not have_content(customer_2.name)
-        expect(page).to have_content(item_3.name)
+        expect(page).to_not have_content(item_3.name)
     end
 
     # And the name of the supermarket that it belongs to
