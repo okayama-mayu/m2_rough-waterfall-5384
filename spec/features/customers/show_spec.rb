@@ -65,7 +65,8 @@ RSpec.describe 'Customer Show Page', type: :feature do
         CustomerItem.create!(customer_id: customer_1.id, item_id: item_3.id)
 
         visit customer_path(customer_1) 
+        save_and_open_page
 
-        expect(page).to have_content("Total Item Price: $14")
+        expect(page).to have_content("Total Item Price: $14.00")
     end
 end
